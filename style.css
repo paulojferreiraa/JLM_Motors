@@ -108,12 +108,21 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     background: url('./img/logo.jpeg') center/cover no-repeat fixed;
     padding-top: 100px;
     position: relative;
+    background-attachment: fixed;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.7) 50%, rgba(10, 10, 10, 0.4) 100%);
+}
+
+@media (max-width: 767.98px) {
+    .hero-section,
+    .experience-bg {
+        background-attachment: scroll;
+        background-position: center center;
+    }
 }
 
 /* ==========================================================================
@@ -176,6 +185,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
    ========================================================================== */
 .experience-bg {
    background: url('./img/loja.jpeg') center/cover no-repeat fixed;
+   background-attachment: fixed;
 }
 
 .experience-overlay {
