@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Identidade Visual e Configurações Globais (JLM Motors)
+   ========================================================================== */
+:root {
+    --bg-black: #0A0A0A;
+    --bg-card: #151515;
+    --bg-card-hover: #1E1E1E;
+    --accent: #C5A059; /* Dourado / Champanhe Premium */
+    --accent-hover: #D4AF37;
+    --text-white: #FFFFFF;
+    --text-gray-300: #D1D5DB;
+    --text-gray-400: #9CA3AF;
+    --text-gray-500: #6B7280;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-gray-300);
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-heading);
+}
+
+/* ==========================================================================
+   Classes Utilitárias de Cores e Tipografia
+   ========================================================================== */
+.bg-dark-custom { background-color: var(--bg-black); }
+.bg-card { background-color: var(--bg-card); }
+.text-accent { color: var(--accent) !important; }
+.bg-accent-subtle { background-color: rgba(197, 160, 89, 0.15); }
+.text-gray-300 { color: var(--text-gray-300); }
+.text-gray-400 { color: var(--text-gray-400); }
+.text-gray-500 { color: var(--text-gray-500); }
+.tracking-wider { letter-spacing: 0.1em; }
+.fw-extrabold { font-weight: 800; }
+.fs-7 { font-size: 0.875rem; }
+.py-6 { padding-top: 5rem; padding-bottom: 5rem; }
+.max-w-700 { max-width: 700px; }
+.max-w-800 { max-width: 800px; }
+.min-h-300 { min-height: 300px; }
+
+/* ==========================================================================
+   Botões Customizados
+   ========================================================================== */
+.btn-accent {
+    background-color: var(--accent);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    transition: var(--transition-fast);
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background-color: var(--accent-hover);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: var(--transition-fast);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Navbar Fixa
+   ========================================================================== */
+#mainNav {
+    padding: 1.2rem 0;
+    transition: var(--transition-fast);
+    background-color: rgba(10, 10, 10, 0.85) !important;
+    backdrop-filter: blur(10px);
+}
+
+#mainNav.navbar-scrolled {
+    padding: 0.7rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    background-color: rgba(10, 10, 10, 0.98) !important;
+}
+
+.nav-link {
+    color: var(--text-gray-300) !important;
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    padding-top: 100px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.7) 50%, rgba(10, 10, 10, 0.4) 100%);
+}
+
+/* ==========================================================================
+   Cards, Serviços & Animações Hover
+   ========================================================================== */
+.card-custom {
+    background-color: var(--bg-card);
+    transition: var(--transition-fast);
+    border-radius: 1rem;
+}
+
+.card-custom:hover {
+    transform: translateY(-8px);
+    background-color: var(--bg-card-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-card {
+    transition: var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(197, 160, 89, 0.4);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(197, 160, 89, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-square {
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.image-zoom {
+    transition: transform 0.5s ease;
+}
+
+.image-zoom:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Experiência JLM Section
+   ========================================================================== */
+.experience-bg {
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+}
+
+.experience-overlay {
+    background: rgba(10, 10, 10, 0.85);
+}
+
+/* ==========================================================================
+   Carrossel de Depoimentos
+   ========================================================================== */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--accent);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+/* ==========================================================================
+   Rodapé & Redes Sociais
+   ========================================================================== */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-card);
+    color: var(--text-gray-300);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--accent);
+    color: #000;
+}
+
+.footer-links a {
+    color: var(--text-gray-400);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+/* ==========================================================================
+   Animações com JS Scroll Observer
+   ========================================================================== */
+.js-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.js-scroll.fade-in-up {
+    transform: translateY(30px);
+}
+
+.js-scroll.slide-left {
+    transform: translateX(-40px);
+}
+
+.js-scroll.slide-right {
+    transform: translateX(40px);
+}
+
+.js-scroll.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
